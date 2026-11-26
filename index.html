@@ -2,458 +2,184 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ramin Academy؛ آموزش کامپیوتر، برنامه‌نویسی و امنیت دیجیتال از پایه تا پیشرفته">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ramin Academy؛ آموزش کامپیوتر، برنامه‌نویسی، امنیت دیجیتال و ارتباط با ما">
 <meta name="theme-color" content="#071225">
-<title>Ramin Academy | آکادمی یادگیری فناوری</title>
+<title>Ramin Academy | آکادمی فناوری</title>
 <style>
-:root{--bg:#071225;--panel:#101f3a;--panel2:#0b1830;--blue:#19a9ff;--cyan:#63d5ff;--text:#f5f9ff;--muted:#b6c8df;--line:#24466e;--green:#35d49a;--yellow:#ffd166}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+:root{--bg:#071225;--panel:#10213c;--panel2:#0b1930;--blue:#138bd0;--cyan:#6bd8ff;--text:#f4f8ff;--muted:#b9c9df;--line:#29496d;--green:#42d6a0;--gold:#ffd166;--red:#ff8b8b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
-a{color:inherit}
-header{padding:28px 16px;text-align:center;background:linear-gradient(135deg,#0c2041,#071225);border-bottom:1px solid var(--line)}
-.logo{font-size:clamp(28px,5vw,42px);font-weight:900;color:var(--cyan);letter-spacing:.5px}
-header p{margin:4px 0;color:var(--muted)}
-nav{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:10px;background:#09162bea;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav a{padding:7px 11px;border-radius:8px;text-decoration:none;color:var(--muted);font-size:14px}
-nav a:hover,nav a:focus{background:#16365c;color:white}
-.hero{text-align:center;padding:76px 18px;background:radial-gradient(ellipse at top,#153b67 0%,#071225 68%)}
-.hero h1{font-size:clamp(26px,5vw,44px);line-height:1.5;color:var(--cyan);margin:0 0 12px}
-.hero p{max-width:720px;margin:0 auto 18px;color:var(--muted)}
-.btn,button{display:inline-block;border:0;border-radius:9px;background:#087fc8;color:white;padding:10px 17px;margin:5px 3px;text-decoration:none;font:inherit;cursor:pointer;transition:.2s}
-.btn:hover,button:hover{background:#0aa7ef;transform:translateY(-1px)}
-.btn.secondary,button.secondary{background:#263d5d}
-.btn.outline,button.outline{background:transparent;border:1px solid var(--blue);color:var(--cyan)}
-section{scroll-margin-top:88px}
-.section{padding:42px 18px;text-align:center}
-.section>h2{color:var(--cyan);font-size:27px;margin:0 0 8px}
-.lead{color:var(--muted);max-width:760px;margin:0 auto 22px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1120px;margin:22px auto}
-.card{background:linear-gradient(145deg,var(--panel),#0c1930);border:1px solid var(--line);border-radius:15px;padding:21px;text-align:right;box-shadow:0 8px 25px #0002}
-.card h3{color:var(--cyan);margin:0 0 8px}
-.card p{color:var(--muted);margin:5px 0 12px}
-.card .tag{display:inline-block;color:#a9ddff;background:#12365a;padding:2px 9px;border-radius:20px;font-size:12px;margin-bottom:8px}
-.lesson{max-width:900px;margin:16px auto;text-align:right}
-.lesson h3{color:var(--cyan)}
-.lesson pre{direction:ltr;text-align:left;white-space:pre-wrap;overflow-wrap:anywhere;background:#050d1b;border:1px solid #29496d;border-radius:9px;padding:14px;color:#d8efff;overflow:auto}
-.lesson code{font-family:Consolas,monospace}
-.form-card{max-width:700px;margin:18px auto;background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:22px;text-align:right}
-input[type=text],input[type=email],textarea,select{width:100%;padding:12px;margin:7px 0 12px;border-radius:8px;border:1px solid #526b89;background:#f7fbff;color:#111;font:inherit}
-textarea{min-height:100px;resize:vertical}
-label{display:block;color:var(--muted);margin:8px 0}
-input[type=radio],input[type=checkbox]{accent-color:#0aa7ef;margin-left:7px}
-.notice{color:var(--yellow);font-size:13px}
-.grid-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:1000px;margin:20px auto;text-align:right}
-.progress-wrap{height:12px;background:#263b58;border-radius:20px;overflow:hidden;margin:10px 0}
-#progressBar{height:100%;width:0;background:var(--green);transition:width .25s}
-#courseList{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:16px}
-#courseList .card{min-width:0}
-#searchResults{max-width:900px;margin:12px auto}
-.empty{color:var(--muted);padding:15px}
-footer{padding:30px 16px;text-align:center;background:#050d1b;color:var(--muted);border-top:1px solid var(--line)}
-footer a{color:var(--cyan)}
-.small{font-size:13px;color:var(--muted)}
-.hidden{display:none!important}
-@media(max-width:620px){nav{position:relative}nav a{font-size:12px;padding:6px 8px}.hero{padding:54px 16px}.section{padding:32px 12px}.card{padding:17px}}
+header{padding:24px 16px;text-align:center;background:radial-gradient(circle at 20% 0,#174c78,transparent 40%),linear-gradient(120deg,#10294b,#071225);border-bottom:1px solid var(--line)}
+.logo{font-size:clamp(28px,5vw,44px);font-weight:900;color:var(--cyan);letter-spacing:1px}header p{margin:3px;color:var(--muted)}
+nav{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:10px;background:#09172bf2;border-bottom:1px solid var(--line)}
+nav a{color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:20px;font-size:13px}nav a:hover{background:#17385c;color:white}
+main{max-width:1180px;margin:auto}.hero{padding:65px 20px;background:radial-gradient(ellipse at 85% 10%,#164a75,transparent 55%)}
+.hero-inner{display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.5;margin:0 0 12px}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);max-width:700px}
+.hero-box,.card,.panel{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 8px 26px #0002}
+.hero-box h2,.card h3,.panel h3{color:var(--cyan);margin-top:0}
+.btn,button{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:9px;padding:10px 16px;text-decoration:none;font:inherit;cursor:pointer;margin:4px 2px}
+button:hover,.btn:hover{filter:brightness(1.15)}.secondary{background:#2b405f}.outline{background:transparent;border:1px solid var(--cyan);color:var(--cyan)}
+section{padding:38px 18px;scroll-margin-top:85px}.section-title{text-align:center;color:var(--cyan);font-size:27px;margin:0 0 5px}.lead{text-align:center;color:var(--muted);max-width:800px;margin:0 auto 22px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin:20px 0}
+.card p,.panel p{color:var(--muted)}.tag{display:inline-block;background:#173b60;color:#a8e5ff;border-radius:20px;padding:2px 10px;font-size:12px}
+.lesson{margin:14px 0;text-align:right}.lesson h3{margin-bottom:5px}.lesson pre{direction:ltr;text-align:left;white-space:pre-wrap;background:#040c18;color:#d9efff;padding:14px;border:1px solid var(--line);border-radius:10px;overflow:auto}
+label{display:block;color:var(--muted);margin:8px 0}input,textarea,select{width:100%;padding:11px;border-radius:8px;border:1px solid #536c89;background:#f5f8fc;color:#111;font:inherit;margin:5px 0 12px}
+input[type=radio],input[type=checkbox]{width:auto;margin-left:7px}textarea{min-height:90px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}
+.notice{border-right:4px solid var(--gold);padding:10px 14px;background:#392f1b;color:#ffe4a0;border-radius:8px;font-size:13px}
+.success{color:var(--green)}.muted{color:var(--muted)}.hidden{display:none!important}
+.course-actions{display:flex;flex-wrap:wrap;gap:6px}.progress{height:12px;border-radius:20px;background:#263b58;overflow:hidden}.progress>span{display:block;height:100%;background:var(--green);width:0}
+.quiz-q{padding:12px 0;border-bottom:1px solid var(--line)}.quiz-q h4{margin:0 0 8px}.result{font-weight:bold;color:var(--green);margin-top:12px}
+footer{text-align:center;padding:30px;background:#040c18;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:700px){.hero-inner{grid-template-columns:1fr}.hero{padding:42px 15px}nav{position:relative}section{padding:30px 12px}}
 </style>
 </head>
 <body>
-<header id="top">
-  <div class="logo">RAMIN ACADEMY</div>
-  <p>از اولین کلیک تا ساختن آینده‌ای دیجیتال</p>
-</header>
-
+<header id="top"><div class="logo">RAMIN ACADEMY</div><p>از اولین کلیک تا ساختن آینده‌ای دیجیتال</p></header>
 <nav aria-label="منوی اصلی">
-  <a href="#home">خانه</a><a href="#courses">دوره‌ها</a><a href="#computer">کامپیوتر</a>
-  <a href="#programming">برنامه‌نویسی</a><a href="#cyber">امنیت سایبری</a>
-  <a href="#quiz">آزمون</a><a href="#dashboard">پیشرفت من</a><a href="#admin">مدیریت دوره‌ها</a><a href="#about">درباره ما</a>
+<a href="#home">خانه</a><a href="#courses">دوره‌ها</a><a href="#auth">ورود و ثبت‌نام</a><a href="#dashboard">داشبورد</a><a href="#quizzes">آزمون‌ها</a><a href="#about">درباره ما</a><a href="#contact">ارتباط با ما</a>
 </nav>
-
 <main>
-<section class="hero" id="home">
-  <h1>به Ramin Academy خوش آمدی!</h1>
-  <p>مهارت‌های فناوری را قدم‌به‌قدم یاد بگیر؛ از کار با کامپیوتر و ساخت وب‌سایت تا اصول امنیت دیجیتال. درس‌ها برای شروع از سطح پایه طراحی شده‌اند.</p>
-  <a class="btn" href="#courses">شروع یادگیری</a>
-  <a class="btn secondary" href="#dashboard">مشاهده پیشرفت</a>
+<section class="hero" id="home"><div class="hero-inner">
+<div><span class="tag">آموزش قدم‌به‌قدم</span><h1>مهارت‌های دیجیتال را <span>هوشمندانه</span> یاد بگیر</h1>
+<p>در Ramin Academy از مبانی کامپیوتر شروع کن، اولین صفحه وب خودت را بساز و یاد بگیر چطور از حساب‌ها و اطلاعاتت محافظت کنی. هر مسیر شامل درس، تمرین و آزمون جداگانه است.</p>
+<a class="btn" href="#courses">دیدن دوره‌ها</a><a class="btn secondary" href="#auth">ورود دانش‌آموز</a></div>
+<div class="hero-box"><h2>سه مسیر برای شروع</h2><p>💻 مهارت‌های کامپیوتر</p><p>👨‍💻 طراحی وب و برنامه‌نویسی</p><p>🛡️ امنیت و سواد دیجیتال</p><p class="success">یادگیری با تمرین و آزمون</p></div>
+</div></section>
+
+<section id="courses"><h2 class="section-title">دوره‌های آموزشی</h2><p class="lead">برای هر دوره جداگانه ثبت‌نام کن. یک حساب دانش‌آموزی برای همه دوره‌ها کافی است.</p>
+<div class="cards">
+<article class="card"><span class="tag">مقدماتی</span><h3>💻 آموزش کامپیوتر</h3><p>شناخت قطعات، ویندوز، مدیریت فایل‌ها، اینترنت و نرم‌افزارهای اداری.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>تمرین پایان درس</li></ul><div class="course-actions"><button onclick="enroll('computer')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('computer')">مشاهده درس‌ها</button></div></article>
+<article class="card"><span class="tag">مقدماتی تا متوسط</span><h3>👨‍💻 برنامه‌نویسی</h3><p>شروع ساخت وب‌سایت با HTML و CSS و آشنایی با JavaScript و Python.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>پروژه کوچک</li></ul><div class="course-actions"><button onclick="enroll('programming')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('programming')">مشاهده درس‌ها</button></div></article>
+<article class="card"><span class="tag">آگاهی دیجیتال</span><h3>🛡️ امنیت سایبری</h3><p>محافظت از حساب‌ها، شناخت فیشینگ، حریم خصوصی و امنیت دستگاه.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>تمرین تشخیص پیام مشکوک</li></ul><div class="course-actions"><button onclick="enroll('cyber')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('cyber')">مشاهده درس‌ها</button></div></article>
+</div></section>
+
+<section id="auth"><h2 class="section-title">ورود و ثبت‌نام دانش‌آموز</h2><p class="lead">در نسخه نمایشی، اطلاعات فقط در همین مرورگر ذخیره می‌شود.</p>
+<div class="grid2">
+<div class="panel"><h3>ساخت حساب آزمایشی</h3><form id="registerForm"><label>نام نمایشی</label><input id="regName" required maxlength="40" placeholder="مثلاً دانش‌آموز آکادمی"><label>ایمیل آزمایشی</label><input id="regEmail" type="email" required placeholder="name@example.com"><label>رمز آزمایشی</label><input id="regPass" type="password" minlength="6" required placeholder="حداقل ۶ نویسه"><button type="submit">ساخت حساب نمایشی</button></form></div>
+<div class="panel"><h3>ورود به حساب آزمایشی</h3><form id="loginForm"><label>ایمیل</label><input id="loginEmail" type="email" required><label>رمز</label><input id="loginPass" type="password" required><button type="submit">ورود</button></form><p id="authMessage" aria-live="polite"></p><button class="secondary hidden" id="logoutBtn" type="button">خروج از حساب</button></div>
+</div>
+<p class="notice">هشدار مهم: این ورود فقط نمونه آموزشی سمت مرورگر است و احراز هویت امن واقعی نیست. از رمز واقعی ایمیل، گیت‌هاب یا حساب‌های دیگر استفاده نکن. برای کاربران واقعی باید سرویس احراز هویت و پایگاه داده متصل شود.</p>
 </section>
 
-<section class="section" id="courses">
-  <h2>مسیرهای آموزشی</h2><p class="lead">یک مسیر را انتخاب کن و درس‌ها را به ترتیب جلو برو.</p>
-  <div class="cards">
-    <article class="card"><span class="tag">مقدماتی</span><h3>💻 آموزش کامپیوتر</h3><p>آشنایی با ویندوز، فایل‌ها، سخت‌افزار و نرم‌افزارهای کاربردی.</p><a class="btn" href="#computer">مشاهده درس‌ها</a></article>
-    <article class="card"><span class="tag">مقدماتی تا متوسط</span><h3>👨‍💻 برنامه‌نویسی</h3><p>شروع طراحی وب با HTML و CSS و آشنایی با JavaScript و Python.</p><a class="btn" href="#programming">مشاهده درس‌ها</a></article>
-    <article class="card"><span class="tag">آگاهی دیجیتال</span><h3>🛡️ امنیت سایبری</h3><p>یادگیری روش‌های امن نگه‌داشتن حساب‌ها، دستگاه‌ها و اطلاعات.</p><a class="btn" href="#cyber">مشاهده درس‌ها</a></article>
-  </div>
-  <div class="form-card">
-    <h3>جست‌وجوی درس یا دوره</h3>
-    <input id="courseSearch" type="text" placeholder="مثلاً HTML، ویندوز یا رمز عبور..." aria-label="جست‌وجوی دوره">
-    <div id="searchResults" aria-live="polite" class="small">برای جست‌وجو، نام درس را بنویس.</div>
-  </div>
+<section id="courseDetails"><h2 class="section-title">محتوای درس‌ها</h2><p class="lead">یک دوره را از کارت بالا انتخاب کن تا درس‌های آن اینجا نمایش داده شود.</p><div id="lessonArea" class="panel"><p class="muted">هنوز دوره‌ای انتخاب نشده است.</p></div></section>
+
+<section id="quizzes"><h2 class="section-title">آزمون‌های آنلاین</h2><p class="lead">برای شرکت در آزمون ابتدا وارد حساب آزمایشی شو و در دوره موردنظر ثبت‌نام کن. هر آزمون ۱۵ سؤال دارد.</p>
+<div class="cards">
+<div class="card"><h3>آزمون کامپیوتر</h3><p>مفاهیم ویندوز، قطعات، فایل‌ها و اینترنت</p><button onclick="startQuiz('computer')">شروع آزمون</button></div>
+<div class="card"><h3>آزمون برنامه‌نویسی</h3><p>HTML، CSS، JavaScript و Python</p><button onclick="startQuiz('programming')">شروع آزمون</button></div>
+<div class="card"><h3>آزمون امنیت سایبری</h3><p>رمز عبور، فیشینگ، حریم خصوصی و دستگاه</p><button onclick="startQuiz('cyber')">شروع آزمون</button></div>
+</div><div id="quizArea" class="panel hidden"></div>
 </section>
 
-<section class="section" id="computer">
-  <h2>💻 آموزش کامپیوتر</h2><p class="lead">مفاهیم پایه برای استفاده بهتر از رایانه.</p>
-  <div class="cards">
-    <article class="card"><h3>درس ۱: آشنایی با ویندوز</h3><p>Desktop، منوی Start، پنجره‌ها و نوار وظیفه.</p><a class="btn" href="#windows-lesson">رفتن به درس</a></article>
-    <article class="card"><h3>درس ۲: فایل و پوشه</h3><p>ساخت پوشه، تغییر نام، کپی، انتقال و مرتب‌سازی فایل‌ها.</p><a class="btn" href="#files-lesson">رفتن به درس</a></article>
-    <article class="card"><h3>درس ۳: سخت‌افزار</h3><p>پردازنده، حافظه رم، حافظه ذخیره‌سازی و مادربرد.</p><a class="btn" href="#hardware-lesson">رفتن به درس</a></article>
-    <article class="card"><h3>درس ۴: اینترنت امن</h3><p>مرورگر، جست‌وجو و تشخیص سایت‌های قابل اعتماد.</p><a class="btn" href="#internet-lesson">رفتن به درس</a></article>
-  </div>
+<section id="dashboard"><h2 class="section-title">داشبورد دانش‌آموز</h2><p class="lead">مشاهده دوره‌های ثبت‌نام‌شده، درس‌های تکمیل‌شده و نتایج آزمون.</p>
+<div class="panel" id="dashboardArea"><p class="muted">برای مشاهده داشبورد، ابتدا وارد حساب آزمایشی شو.</p></div>
 </section>
 
-<section class="section" id="programming">
-  <h2>👨‍💻 آموزش برنامه‌نویسی</h2><p class="lead">با مثال‌های کوتاه و قابل تمرین، اولین پروژه‌هایت را بساز.</p>
-  <div class="cards">
-    <article class="card"><h3>HTML</h3><p>ساختار صفحه وب، عنوان، پاراگراف، تصویر و لینک.</p><a class="btn" href="#html-lesson">شروع HTML</a></article>
-    <article class="card"><h3>CSS</h3><p>رنگ، فونت، فاصله‌ها و چیدمان صفحه.</p><a class="btn" href="#css-lesson">شروع CSS</a></article>
-    <article class="card"><h3>JavaScript</h3><p>متغیرها، رویداد کلیک و تعامل با صفحه.</p><a class="btn" href="#js-lesson">شروع JavaScript</a></article>
-    <article class="card"><h3>Python</h3><p>نمایش متن، متغیرها و شرط‌ها.</p><a class="btn" href="#python-lesson">شروع Python</a></article>
-  </div>
-</section>
+<section id="about"><h2 class="section-title">درباره Ramin Academy</h2><div class="panel"><p>Ramin Academy یک پروژه آموزشی برای یادگیری مهارت‌های پایه فناوری، برنامه‌نویسی و امنیت دیجیتال است. هدف آن ساده‌کردن یادگیری با درس‌های کوتاه، تمرین و آزمون است.</p><p>در این آکادمی می‌توانی قدم‌به‌قدم یاد بگیری، تمرین انجام بدهی و میزان پیشرفتت را در داشبورد آزمایشی ببینی.</p></div></section>
 
-<section class="section" id="cyber">
-  <h2>🛡️ آموزش امنیت سایبری</h2><p class="lead">این بخش بر محافظت از خود و استفاده مسئولانه از فناوری تمرکز دارد.</p>
-  <div class="cards">
-    <article class="card"><h3>درس ۱: رمز عبور امن</h3><p>ساخت رمزهای طولانی و متفاوت و نگهداری امن آن‌ها.</p><a class="btn" href="#password-lesson">رفتن به درس</a></article>
-    <article class="card"><h3>درس ۲: فیشینگ</h3><p>شناخت پیام‌ها و لینک‌های فریبنده و بررسی فرستنده.</p><a class="btn" href="#phishing-lesson">رفتن به درس</a></article>
-    <article class="card"><h3>درس ۳: حریم خصوصی</h3><p>تنظیمات حریم خصوصی و مراقبت از اطلاعات شخصی.</p><a class="btn" href="#privacy-lesson">رفتن به درس</a></article>
-    <article class="card"><h3>درس ۴: امنیت دستگاه</h3><p>به‌روزرسانی، قفل صفحه و نصب برنامه از منابع معتبر.</p><a class="btn" href="#device-lesson">رفتن به درس</a></article>
-  </div>
-</section>
-
-<section class="section" id="lessons">
-  <h2>درس‌های آموزشی</h2>
-  <p class="lead">پس از مطالعه هر درس، دکمه «درس را کامل کردم» را بزن تا پیشرفتت ذخیره شود.</p>
-
-  <article class="card lesson" id="windows-lesson" data-lesson="windows">
-    <h3>کامپیوتر | درس ۱: آشنایی با ویندوز</h3>
-    <p>ویندوز یک سیستم‌عامل است؛ یعنی نرم‌افزاری که اجرای برنامه‌ها و کار با سخت‌افزار را مدیریت می‌کند.</p>
-    <ul><li><b>Desktop:</b> صفحه اصلی پس از ورود به ویندوز.</li><li><b>Start:</b> محل دسترسی به برنامه‌ها و تنظیمات.</li><li><b>Taskbar:</b> نوار ابزار پایین صفحه.</li><li><b>Recycle Bin:</b> محل نگهداری موقت فایل‌های حذف‌شده.</li></ul>
-    <p><b>تمرین:</b> یک پوشه با نام Academy روی دسکتاپ بساز.</p><button class="complete-btn" data-complete="windows">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="files-lesson" data-lesson="files">
-    <h3>کامپیوتر | درس ۲: فایل و پوشه</h3>
-    <p>فایل، داده‌ای مانند عکس یا سند است. پوشه برای دسته‌بندی فایل‌ها استفاده می‌شود.</p>
-    <ul><li>برای ساخت پوشه جدید از گزینه New Folder استفاده کن.</li><li>برای تغییر نام، فایل را انتخاب و Rename را بزن.</li><li>برای کپی و چسباندن می‌توانی از Ctrl+C و Ctrl+V استفاده کنی.</li></ul>
-    <button class="complete-btn" data-complete="files">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="hardware-lesson" data-lesson="hardware">
-    <h3>کامپیوتر | درس ۳: قطعات اصلی</h3>
-    <p><b>CPU:</b> دستورها را پردازش می‌کند. <b>RAM:</b> فضای موقت و سریع برای برنامه‌های در حال اجراست. <b>SSD/HDD:</b> اطلاعات را نگهداری می‌کند. <b>مادربرد:</b> قطعات را به هم متصل می‌کند.</p>
-    <button class="complete-btn" data-complete="hardware">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="internet-lesson" data-lesson="internet">
-    <h3>کامپیوتر | درس ۴: اینترنت و مرورگر</h3>
-    <p>مرورگر برنامه‌ای برای بازکردن وب‌سایت‌هاست. هنگام ورود اطلاعات، آدرس سایت را بررسی کن و به هشدارهای امنیتی مرورگر توجه داشته باش.</p>
-    <button class="complete-btn" data-complete="internet">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="html-lesson" data-lesson="html">
-    <h3>برنامه‌نویسی | درس ۱: HTML</h3>
-    <p>HTML برای مشخص‌کردن ساختار محتوای صفحه وب استفاده می‌شود.</p>
-    <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="fa"&gt;
-&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;title&gt;اولین صفحه&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;سلام دنیا&lt;/h1&gt;
-  &lt;p&gt;این اولین صفحه من است.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    <p>تگ h1 عنوان اصلی و تگ p یک پاراگراف می‌سازد.</p><button class="complete-btn" data-complete="html">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="css-lesson" data-lesson="css">
-    <h3>برنامه‌نویسی | درس ۲: CSS</h3>
-    <p>CSS ظاهر عناصر HTML را تعیین می‌کند؛ مثل رنگ، اندازه و فاصله.</p>
-    <pre><code>h1 {
-  color: deepskyblue;
-  text-align: center;
-}</code></pre>
-    <p>در این مثال عنوان آبی و وسط‌چین می‌شود.</p><button class="complete-btn" data-complete="css">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="js-lesson" data-lesson="javascript">
-    <h3>برنامه‌نویسی | درس ۳: JavaScript</h3>
-    <p>جاوااسکریپت به صفحه وب رفتار و تعامل اضافه می‌کند.</p>
-    <pre><code>const button = document.querySelector("button");
-button.addEventListener("click", function () {
-  alert("سلام!");
-});</code></pre>
-    <p>این نمونه با کلیک روی دکمه یک پیام نشان می‌دهد.</p><button class="complete-btn" data-complete="javascript">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="python-lesson" data-lesson="python">
-    <h3>برنامه‌نویسی | درس ۴: Python</h3>
-    <p>پایتون زبانی خوانا و پرکاربرد است.</p>
-    <pre><code>name = "Ramin Academy"
-print("Welcome to", name)</code></pre>
-    <p>تابع print متن را در خروجی نمایش می‌دهد و name یک متغیر است.</p><button class="complete-btn" data-complete="python">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="password-lesson" data-lesson="password">
-    <h3>امنیت | درس ۱: رمز عبور امن</h3>
-    <p>برای هر حساب، رمز متفاوت و طولانی انتخاب کن. از رمزهای قابل حدس مانند نام یا تاریخ تولد استفاده نکن و رمز را برای دیگران نفرست. در صورت امکان تأیید دومرحله‌ای را فعال کن.</p>
-    <button class="complete-btn" data-complete="password">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="phishing-lesson" data-lesson="phishing">
-    <h3>امنیت | درس ۲: شناخت فیشینگ</h3>
-    <p>فیشینگ تلاش برای فریب افراد و گرفتن اطلاعات آن‌هاست. پیام‌های فوری و تهدیدآمیز، جایزه‌های غیرمنتظره و لینک‌های ناشناس را با دقت بررسی کن. قبل از واردکردن رمز، آدرس سایت را خودت بررسی کن.</p>
-    <button class="complete-btn" data-complete="phishing">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="privacy-lesson" data-lesson="privacy">
-    <h3>امنیت | درس ۳: حریم خصوصی</h3>
-    <p>نشانی خانه، شماره تماس، رمزها و اطلاعات خصوصی را در صفحه‌های عمومی منتشر نکن. دسترسی برنامه‌ها به دوربین، میکروفون و موقعیت مکانی را فقط در صورت نیاز بررسی کن.</p>
-    <button class="complete-btn" data-complete="privacy">درس را کامل کردم</button>
-  </article>
-
-  <article class="card lesson" id="device-lesson" data-lesson="device">
-    <h3>امنیت | درس ۴: محافظت از دستگاه</h3>
-    <p>سیستم‌عامل و برنامه‌ها را به‌روز نگه دار، قفل صفحه فعال کن و برنامه‌ها را از منابع معتبر دریافت کن. از فایل‌های ناشناس و پیوست‌های مشکوک دوری کن.</p>
-    <button class="complete-btn" data-complete="device">درس را کامل کردم</button>
-  </article>
-</section>
-
-<section class="section" id="quiz">
-  <h2>آزمون آنلاین</h2><p class="lead">به سه پرسش پاسخ بده و نتیجه را ببین.</p>
-  <div class="form-card">
-    <form id="quizForm">
-      <h3>۱) HTML چه کاربردی دارد؟</h3>
-      <label><input type="radio" name="q1" value="a" required> ویرایش ویدئو</label>
-      <label><input type="radio" name="q1" value="b"> ساختار صفحات وب</label>
-      <label><input type="radio" name="q1" value="c"> افزایش صدای رایانه</label><hr>
-      <h3>۲) کدام مورد حافظه موقت رایانه است؟</h3>
-      <label><input type="radio" name="q2" value="a" required> RAM</label>
-      <label><input type="radio" name="q2" value="b"> مانیتور</label>
-      <label><input type="radio" name="q2" value="c"> صفحه‌کلید</label><hr>
-      <h3>۳) کدام کار امنیت حساب را بهتر می‌کند؟</h3>
-      <label><input type="radio" name="q3" value="a" required> استفاده از یک رمز برای همه حساب‌ها</label>
-      <label><input type="radio" name="q3" value="b"> فرستادن رمز برای دوستان</label>
-      <label><input type="radio" name="q3" value="c"> فعال‌کردن تأیید دومرحله‌ای</label>
-      <button type="submit">ثبت پاسخ‌ها</button>
-      <button type="reset" class="secondary">پاک‌کردن پاسخ‌ها</button>
-    </form>
-    <h3 id="quizResult" aria-live="polite"></h3>
-  </div>
-</section>
-
-<section class="section" id="dashboard">
-  <h2>داشبورد یادگیری من</h2><p class="lead">پیشرفت درس‌هایی که کامل کرده‌ای روی همین مرورگر ذخیره می‌شود.</p>
-  <div class="form-card">
-    <h3>میزان پیشرفت</h3>
-    <div class="progress-wrap"><div id="progressBar"></div></div>
-    <p id="progressText">۰ از ۱۲ درس کامل شده است.</p>
-    <button id="resetProgress" class="outline" type="button">شروع دوباره پیشرفت</button>
-    <p class="small">اگر داده‌های مرورگر پاک شوند یا از دستگاه دیگری استفاده کنی، این پیشرفت منتقل نمی‌شود.</p>
-  </div>
-</section>
-
-<section class="section" id="admin">
-  <h2>مدیریت دوره‌ها</h2><p class="lead">می‌توانی دوره‌های نمایشی خودت را اضافه، ویرایش یا حذف کنی.</p>
-  <div class="form-card">
-    <form id="courseForm">
-      <label for="courseName">نام دوره</label><input id="courseName" type="text" maxlength="80" placeholder="مثلاً آموزش مقدماتی طراحی سایت" required>
-      <label for="courseDescription">توضیحات</label><textarea id="courseDescription" maxlength="500" placeholder="توضیح کوتاه دوره..." required></textarea>
-      <button type="submit" id="courseSubmit">افزودن دوره</button>
-      <button type="button" id="cancelEdit" class="secondary hidden">لغو ویرایش</button>
-    </form>
-    <div id="courseList" aria-live="polite"></div>
-    <p class="notice">مهم: این پنل فقط نمایشی و محلی است؛ اطلاعات فقط در مرورگر همین دستگاه ذخیره می‌شود و رمز ورود یا دسترسی مدیریتی واقعی ندارد. برای انتشار دوره‌های مشترک و حساب کاربران باید سرور و پایگاه داده ساخته شود.</p>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <h2>درباره Ramin Academy</h2>
-  <div class="card lesson">
-    <p>Ramin Academy یک پروژه آموزشی برای یادگیری مهارت‌های پایه فناوری، برنامه‌نویسی و امنیت دیجیتال است. هدف این وب‌سایت این است که یادگیری را ساده، مرحله‌به‌مرحله و قابل تمرین کند.</p>
-    <p>برای پیشنهاد درس جدید یا گزارش مشکل، می‌توانی از بخش زیر استفاده کنی.</p>
-    <form id="feedbackForm">
-      <label for="feedbackName">نام (اختیاری)</label><input id="feedbackName" type="text" maxlength="50" placeholder="نام شما">
-      <label for="feedbackText">پیام یا پیشنهاد</label><textarea id="feedbackText" maxlength="1000" required placeholder="پیام خود را بنویس..."></textarea>
-      <button type="submit">آماده‌کردن پیام</button>
-      <p class="small" id="feedbackResult" aria-live="polite"></p>
-    </form>
-  </div>
+<section id="contact"><h2 class="section-title">ارتباط با ما</h2><p class="lead">برای پرسش‌ها، پیشنهادها و پیگیری دوره‌ها از راه‌های زیر با Ramin Academy در ارتباط باش.</p>
+<div class="cards">
+<div class="card"><h3>✈️ تلگرام</h3><p>آیدی رسمی تلگرام آکادمی:</p><p dir="ltr"><b>@Academ282</b></p><a class="btn" href="https://t.me/Academ282" target="_blank" rel="noopener noreferrer">ورود به تلگرام</a></div>
+<div class="card"><h3>💬 روبیکا</h3><p>آیدی روبیکای آکادمی:</p><p dir="ltr"><b>@Raminacademy1</b></p><a class="btn" href="https://rubika.ir/Raminacademy1" target="_blank" rel="noopener noreferrer">ورود به روبیکا</a></div>
+</div>
+<p class="notice">نکته: پیوندها به صفحه آیدی‌های اعلام‌شده می‌روند. اگر آیدی در آن برنامه فعال یا عمومی نباشد، ممکن است صفحه باز نشود.</p>
 </section>
 </main>
-
-<footer>
-  <p><b>Ramin Academy</b> | یادگیری امروز، مهارت فردا</p>
-  <p class="small">© <span id="year"></span> - پروژه آموزشی</p>
-  <a href="#top">بازگشت به بالای صفحه ↑</a>
-</footer>
+<footer><b>Ramin Academy</b><p>یادگیری امروز، مهارت فردا</p><p><a href="https://t.me/Academ282" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">تلگرام</a> · <a href="https://rubika.ir/Raminacademy1" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">روبیکا</a></p><a href="#top" style="color:var(--cyan)">بازگشت به بالا ↑</a></footer>
 
 <script>
 "use strict";
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* فهرست درس‌ها و جست‌وجو */
-const searchableLessons = [
-  ["آشنایی با ویندوز","windows-lesson","کامپیوتر ویندوز دسکتاپ"],
-  ["فایل و پوشه","files-lesson","کامپیوتر فایل پوشه"],
-  ["قطعات سخت‌افزار","hardware-lesson","کامپیوتر سخت افزار رم پردازنده"],
-  ["اینترنت و مرورگر","internet-lesson","کامپیوتر اینترنت مرورگر"],
-  ["HTML","html-lesson","برنامه نویسی وب html"],
-  ["CSS","css-lesson","برنامه نویسی طراحی ظاهر css"],
-  ["JavaScript","js-lesson","برنامه نویسی جاوا اسکریپت"],
-  ["Python","python-lesson","برنامه نویسی پایتون"],
-  ["رمز عبور امن","password-lesson","امنیت سایبری رمز عبور"],
-  ["شناخت فیشینگ","phishing-lesson","امنیت سایبری لینک مشکوک فیشینگ"],
-  ["حریم خصوصی","privacy-lesson","امنیت اطلاعات حریم خصوصی"],
-  ["امنیت دستگاه","device-lesson","امنیت به روزرسانی دستگاه"]
-];
-const searchInput = document.getElementById("courseSearch");
-const searchResults = document.getElementById("searchResults");
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.trim().toLocaleLowerCase("fa");
-  if (!query) { searchResults.textContent = "برای جست‌وجو، نام درس را بنویس."; return; }
-  const matches = searchableLessons.filter(item => (item[0] + " " + item[2]).toLocaleLowerCase("fa").includes(query));
-  searchResults.replaceChildren();
-  if (!matches.length) { searchResults.textContent = "درسی با این عبارت پیدا نشد."; return; }
-  matches.forEach(item => {
-    const link = document.createElement("a");
-    link.className = "btn outline";
-    link.href = "#" + item[1];
-    link.textContent = item[0];
-    searchResults.appendChild(link);
-  });
-});
-
-/* ذخیره پیشرفت درس‌ها */
-const PROGRESS_KEY = "raminAcademyProgress_v2";
-const lessonIds = searchableLessons.map(item => item[1].replace("-lesson",""));
-let completed = [];
-try {
-  const stored = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "[]");
-  if (Array.isArray(stored)) completed = stored.filter(id => lessonIds.includes(id));
-} catch (_) { completed = []; }
-
-function saveProgress() {
-  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(completed)); }
-  catch (_) { alert("ذخیره پیشرفت در این مرورگر ممکن نشد."); }
-  updateProgress();
-}
-function updateProgress() {
-  const percent = Math.round((completed.length / lessonIds.length) * 100);
-  document.getElementById("progressBar").style.width = percent + "%";
-  document.getElementById("progressText").textContent =
-    completed.length + " از " + lessonIds.length + " درس کامل شده است (" + percent + "٪).";
-  document.querySelectorAll("[data-complete]").forEach(button => {
-    const done = completed.includes(button.dataset.complete);
-    button.textContent = done ? "✓ این درس کامل شده" : "درس را کامل کردم";
-    button.classList.toggle("secondary", done);
-  });
-}
-document.querySelectorAll("[data-complete]").forEach(button => {
-  button.addEventListener("click", () => {
-    const id = button.dataset.complete;
-    completed = completed.includes(id) ? completed.filter(item => item !== id) : [...completed, id];
-    saveProgress();
-  });
-});
-document.getElementById("resetProgress").addEventListener("click", () => {
-  if (!confirm("پیشرفت ذخیره‌شده پاک شود؟")) return;
-  completed = []; saveProgress();
-});
-updateProgress();
-
-/* آزمون */
-document.getElementById("quizForm").addEventListener("submit", event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const key = {q1:"b",q2:"a",q3:"c"};
-  let score = 0;
-  Object.keys(key).forEach(name => {
-    const answer = form.querySelector('input[name="' + name + '"]:checked');
-    if (answer && answer.value === key[name]) score++;
-  });
-  const result = document.getElementById("quizResult");
-  result.textContent = "نتیجه شما: " + score + " از ۳";
-  result.style.color = score === 3 ? "#35d49a" : "#63d5ff";
-});
-document.getElementById("quizForm").addEventListener("reset", () => {
-  document.getElementById("quizResult").textContent = "";
-});
-
-/* مدیریت محلی دوره‌ها */
-const STORAGE_KEY = "raminAcademyCustomCourses_v2";
-const courseForm = document.getElementById("courseForm");
-const courseList = document.getElementById("courseList");
-const courseName = document.getElementById("courseName");
-const courseDescription = document.getElementById("courseDescription");
-const courseSubmit = document.getElementById("courseSubmit");
-const cancelEdit = document.getElementById("cancelEdit");
-let customCourses = [];
-let editingIndex = -1;
-try {
-  const storedCourses = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-  if (Array.isArray(storedCourses)) customCourses = storedCourses.filter(c => c && typeof c.name === "string" && typeof c.description === "string");
-} catch (_) { customCourses = []; }
-
-function saveCourses() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(customCourses)); }
-  catch (_) { alert("ذخیره دوره‌ها ممکن نشد."); }
-}
-function resetCourseEditor() {
-  editingIndex = -1; courseForm.reset(); courseSubmit.textContent = "افزودن دوره"; cancelEdit.classList.add("hidden");
-}
-function renderCourses() {
-  courseList.replaceChildren();
-  if (!customCourses.length) {
-    const empty = document.createElement("p"); empty.className = "empty"; empty.textContent = "هنوز دوره‌ای اضافه نکرده‌ای."; courseList.appendChild(empty); return;
-  }
-  customCourses.forEach((course,index) => {
-    const card = document.createElement("article"); card.className = "card";
-    const title = document.createElement("h3"); title.textContent = course.name;
-    const desc = document.createElement("p"); desc.textContent = course.description;
-    const edit = document.createElement("button"); edit.type = "button"; edit.textContent = "ویرایش";
-    edit.addEventListener("click", () => {
-      editingIndex = index; courseName.value = course.name; courseDescription.value = course.description;
-      courseSubmit.textContent = "ذخیره تغییرات"; cancelEdit.classList.remove("hidden");
-      courseForm.scrollIntoView({behavior:"smooth",block:"center"});
-    });
-    const del = document.createElement("button"); del.type = "button"; del.className = "secondary"; del.textContent = "حذف";
-    del.addEventListener("click", () => {
-      if (!confirm("این دوره حذف شود؟")) return;
-      customCourses.splice(index,1); saveCourses(); renderCourses();
-      if (editingIndex === index) resetCourseEditor();
-    });
-    card.append(title,desc,edit,del); courseList.appendChild(card);
-  });
-}
-courseForm.addEventListener("submit", event => {
-  event.preventDefault();
-  const name = courseName.value.trim(), description = courseDescription.value.trim();
-  if (!name || !description) return;
-  if (editingIndex >= 0 && customCourses[editingIndex]) customCourses[editingIndex] = {name,description};
-  else customCourses.push({name,description});
-  saveCourses(); resetCourseEditor(); renderCourses();
-});
-cancelEdit.addEventListener("click", resetCourseEditor);
-renderCourses();
-
-/* فرم پیشنهاد: پیام را آماده می‌کند؛ ارسال اینترنتی بدون سرویس/سرور ممکن نیست. */
-document.getElementById("feedbackForm").addEventListener("submit", event => {
-  event.preventDefault();
-  const name = document.getElementById("feedbackName").value.trim();
-  const message = document.getElementById("feedbackText").value.trim();
-  if (!message) return;
-  const text = (name ? "نام: " + name + "\n" : "") + "پیام برای Ramin Academy:\n" + message;
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(() => {
-      document.getElementById("feedbackResult").textContent = "متن پیام کپی شد؛ می‌توانی آن را برای مدیر سایت بفرستی.";
-    }).catch(() => {
-      document.getElementById("feedbackResult").textContent = "پیام آماده شد. متن را انتخاب و کپی کن.";
-    });
-  } else {
-    document.getElementById("feedbackResult").textContent = "پیام آماده شد. متن را انتخاب و کپی کن.";
-  }
-});
+const courses={
+computer:{title:"آموزش کامپیوتر",lessons:[
+["درس ۱: کامپیوتر چیست؟","کامپیوتر دستگاهی الکترونیکی است که داده را دریافت می‌کند، طبق دستورها پردازش می‌کند و نتیجه را ارائه می‌دهد. چهار مرحله مهم کار آن ورودی، پردازش، خروجی و ذخیره‌سازی است. صفحه‌کلید و ماوس ابزار ورودی، نمایشگر ابزار خروجی و حافظه محل نگهداری داده است.","تمرین: سه وسیله ورودی و دو وسیله خروجی نام ببر."],
+["درس ۲: آشنایی با ویندوز","ویندوز یک سیستم‌عامل است؛ یعنی منابع سخت‌افزاری را مدیریت می‌کند و محیطی برای اجرای برنامه‌ها فراهم می‌کند. Desktop صفحه اصلی، Start منوی دسترسی به برنامه‌ها، Taskbar نوار وظیفه و پنجره‌ها محیط اجرای برنامه‌ها هستند.","تمرین: منوی Start را باز کن و نام سه برنامه را پیدا کن."],
+["درس ۳: فایل و پوشه","فایل مجموعه‌ای از اطلاعات مانند عکس، سند یا ویدئو است. پوشه برای مرتب‌سازی فایل‌ها به کار می‌رود. پسوند فایل معمولاً نوع آن را نشان می‌دهد؛ مانند .txt برای متن و .jpg برای تصویر. کپی یک نسخه می‌سازد و انتقال، فایل را به محل دیگری می‌برد.","تمرین: پوشه‌ای به نام Academy بساز و داخل آن پوشه‌ای به نام Homework ایجاد کن."],
+["درس ۴: قطعات اصلی","CPU دستورها را پردازش می‌کند. RAM حافظه موقت برنامه‌های در حال اجراست و با خاموش‌شدن دستگاه محتوای معمول آن پاک می‌شود. SSD یا HDD اطلاعات را نگه می‌دارد. مادربرد قطعات را به هم متصل می‌کند و منبع تغذیه برق موردنیاز را فراهم می‌کند.","تمرین: تفاوت RAM و SSD را با یک جمله توضیح بده."],
+["درس ۵: اینترنت و مرورگر","اینترنت شبکه‌ای جهانی از شبکه‌هاست. مرورگر مانند Chrome یا Firefox صفحات وب را نمایش می‌دهد. موتور جست‌وجو به پیدا کردن اطلاعات کمک می‌کند. آدرس سایت را بررسی کن و اطلاعات حساس را فقط در سایت معتبر وارد کن.","تمرین: تفاوت مرورگر و موتور جست‌وجو را بنویس."]]},
+programming:{title:"برنامه‌نویسی",lessons:[
+["درس ۱: برنامه‌نویسی چیست؟","برنامه‌نویسی یعنی نوشتن دستورهای دقیق برای انجام کار توسط رایانه. الگوریتم، مجموعه‌ای مرتب از گام‌ها برای حل مسئله است. پیش از نوشتن کد، مسئله را به گام‌های کوچک تقسیم کن.","تمرین: الگوریتم آماده‌کردن یک لیوان آب را در پنج مرحله بنویس."],
+["درس ۲: HTML","HTML زبان نشانه‌گذاری برای ساختار صفحه وب است. تگ h1 عنوان اصلی، p پاراگراف، a پیوند و img تصویر را مشخص می‌کند. HTML به‌تنهایی ظاهر پیشرفته ایجاد نمی‌کند؛ برای ظاهر از CSS کمک می‌گیریم.","نمونه: <h1>سلام</h1> یک عنوان می‌سازد. تمرین: یک عنوان و یک پاراگراف برای صفحه خودت طراحی کن."],
+["درس ۳: CSS","CSS ظاهر عناصر HTML را کنترل می‌کند؛ مانند رنگ، اندازه، فاصله و چیدمان. یک قانون CSS معمولاً از انتخابگر و مجموعه ویژگی‌ها تشکیل می‌شود.","نمونه: h1 { color: blue; } رنگ عنوان را آبی می‌کند. تمرین: رنگ و اندازه یک عنوان را تغییر بده."],
+["درس ۴: JavaScript","JavaScript به صفحه وب رفتار و تعامل اضافه می‌کند. متغیر برای نگهداری داده، شرط برای تصمیم‌گیری و تابع برای گروه‌بندی دستورها استفاده می‌شود. رویداد کلیک می‌تواند اجرای یک تابع را آغاز کند.","نمونه: let score = 10; مقدار ۱۰ را در متغیر score نگه می‌دارد. تمرین: متغیری به نام studentName بساز."],
+["درس ۵: Python","Python زبانی خوانا و پرکاربرد است. دستور print برای نمایش خروجی، متغیر برای نگهداری داده و if برای تصمیم‌گیری استفاده می‌شود.","نمونه: name = 'Ramin' سپس print(name). تمرین: نام یک شهر را در متغیر ذخیره و چاپ کن."]]},
+cyber:{title:"امنیت سایبری",lessons:[
+["درس ۱: امنیت دیجیتال چیست؟","امنیت دیجیتال یعنی محافظت از دستگاه‌ها، حساب‌ها و اطلاعات در برابر دسترسی یا تغییر غیرمجاز. سه مفهوم مهم محرمانگی، یکپارچگی و دسترس‌پذیری هستند. هر کاربر با به‌روزرسانی و رفتار محتاطانه می‌تواند امنیت خود را بهتر کند.","تمرین: برای هر یک از سه مفهوم یک مثال ساده بنویس."],
+["درس ۲: رمز عبور و ورود دومرحله‌ای","برای هر حساب رمز طولانی و متفاوت انتخاب کن. رمز را با دیگران به اشتراک نگذار و از گزینه تأیید دومرحله‌ای استفاده کن. مدیر رمز معتبر می‌تواند به ساخت و نگهداری رمزهای متفاوت کمک کند.","تمرین: توضیح بده چرا استفاده از یک رمز برای همه حساب‌ها خطرناک است."],
+["درس ۳: شناخت فیشینگ","فیشینگ تلاش برای فریب کاربر و گرفتن اطلاعات است. پیام جایزه غیرمنتظره، درخواست فوری رمز، فرستنده ناشناس یا نشانی اینترنتی نامتعارف می‌تواند نشانه هشدار باشد. از لینک مشکوک وارد حساب نشو و از راه رسمی به سایت برو.","تمرین: سه نشانه پیام فریبنده را فهرست کن."],
+["درس ۴: حریم خصوصی","اطلاعاتی مانند نشانی خانه، شماره تماس، رمزها و مدارک شخصی را عمومی نکن. دسترسی برنامه‌ها به دوربین، میکروفون و موقعیت مکانی را بررسی کن و فقط اطلاعات ضروری را به اشتراک بگذار.","تمرین: دو تنظیم حریم خصوصی در تلفن یا رایانه خود پیدا کن."],
+["درس ۵: امنیت دستگاه و شبکه","سیستم‌عامل و برنامه‌ها را به‌روز نگه دار، قفل صفحه فعال کن و برنامه‌ها را از منابع معتبر بگیر. از شبکه‌های عمومی برای کارهای حساس با احتیاط استفاده کن و هشدارهای امنیتی مرورگر را نادیده نگیر.","تمرین: فهرستی از سه کار برای امن‌تر نگه‌داشتن دستگاهت بنویس."]]}
+};
+const quizzes={
+computer:[
+["کامپیوتر داده‌ها را چه‌طور پردازش می‌کند؟",["طبق دستورها","با حدس","فقط با اینترنت","بدون برق"],0],
+["ویندوز چه نوع نرم‌افزاری است؟",["مرورگر","سیستم‌عامل","موتور جست‌وجو","ویرایشگر تصویر"],1],
+["کدام مورد برای مرتب‌سازی فایل‌هاست؟",["پوشه","پردازنده","مانیتور","بلندگو"],0],
+["پسوند JPG معمولاً مربوط به چیست؟",["صدا","تصویر","برنامه","پوشه"],1],
+["کدام قطعه دستورها را پردازش می‌کند؟",["RAM","CPU","SSD","مانیتور"],1],
+["RAM معمولاً چه نوع حافظه‌ای است؟",["موقت","دائمی","نوری","خارجی"],0],
+["کدام گزینه حافظه ذخیره‌سازی است؟",["SSD","ماوس","CPU","کیبورد"],0],
+["مادربرد چه کاری انجام می‌دهد؟",["نمایش تصویر","اتصال قطعات","چاپ کاغذ","پخش صدا"],1],
+["مرورگر برای چیست؟",["بازکردن وب‌سایت","ساخت قطعه","شارژ رایانه","فشرده‌سازی برق"],0],
+["کدام نمونه موتور جست‌وجو است؟",["Google","Windows","RAM","USB"],0],
+["کلید میانبر کپی چیست؟",["Ctrl+V","Ctrl+C","Ctrl+X","Alt+F4"],1],
+["برای چسباندن مورد کپی‌شده کدام است؟",["Ctrl+V","Ctrl+C","Ctrl+P","Ctrl+Z"],0],
+["Recycle Bin در ویندوز چه کاربردی دارد؟",["نگهداری موقت فایل حذف‌شده","اجرای بازی","اتصال اینترنت","ویرایش متن"],0],
+["کدام وسیله ورودی است؟",["نمایشگر","بلندگو","صفحه‌کلید","چاپگر"],2],
+["برای ورود امن اطلاعات چه کاری بهتر است؟",["بررسی آدرس سایت","کلیک روی هر لینک","فرستادن رمز","نادیده‌گرفتن هشدار"],0]
+],
+programming:[
+["HTML بیشتر برای چه کاری است؟",["ساختار صفحه وب","ویرایش صدا","مدیریت برق","ساخت قطعه"],0],
+["کدام تگ عنوان اصلی را مشخص می‌کند؟",["<p>","<h1>","<img>","<br>"],1],
+["CSS چه چیزی را کنترل می‌کند؟",["ظاهر صفحه","نام دامنه","سیستم‌عامل","حافظه رایانه"],0],
+["کدام ویژگی CSS رنگ متن را تعیین می‌کند؟",["font-size","color","margin","display"],1],
+["JavaScript چه قابلیتی اضافه می‌کند؟",["تعامل و رفتار","فضای فیزیکی","سرعت اینترنت","حافظه سخت‌افزار"],0],
+["متغیر برای چیست؟",["نگهداری داده","خاموش‌کردن مانیتور","ساخت پوشه","چاپ کاغذ"],0],
+["کدام کلمه در JavaScript برای تعریف متغیر قابل تغییر استفاده می‌شود؟",["let","style","body","href"],0],
+["تابع چه فایده‌ای دارد؟",["گروه‌بندی دستورها","تغییر قطعه","اتصال کابل","پاک‌کردن سیستم"],0],
+["Python چه نوع زبانی است؟",["برنامه‌نویسی","نشانه‌گذاری تصویر","سیستم‌عامل","مرورگر"],0],
+["در Python برای نمایش خروجی متنی معمولاً از چه چیزی استفاده می‌شود؟",["print()","showHTML()","echoCSS()","writePage()"],0],
+["الگوریتم چیست؟",["مراحل مرتب حل مسئله","نوع مانیتور","نام مرورگر","قطعه حافظه"],0],
+["کدام تگ برای پاراگراف است؟",["<p>","<h1>","<img>","<title>"],0],
+["کدام ویژگی CSS اندازه متن را تعیین می‌کند؟",["color","font-size","border","href"],1],
+["شرط در برنامه‌نویسی برای چیست؟",["تصمیم‌گیری بر اساس وضعیت","ذخیره عکس","اتصال اینترنت","نمایشگر"],0],
+["کدام مورد یک نام مناسب برای متغیر است؟",["studentName","2name","student-name!","نام متغیر با فاصله"],0]
+],
+cyber:[
+["هدف امنیت دیجیتال چیست؟",["محافظت از اطلاعات و دستگاه‌ها","افزایش نور صفحه","سرعت تایپ","تغییر رنگ سایت"],0],
+["کدام رمز بهتر است؟",["رمز طولانی و متفاوت","123456","نام کوچک","تاریخ تولد"],0],
+["تأیید دومرحله‌ای چه فایده‌ای دارد؟",["یک لایه امنیتی اضافه","حذف همه فایل‌ها","افزایش صدا","خاموش‌کردن اینترنت"],0],
+["فیشینگ چیست؟",["فریب برای گرفتن اطلاعات","نوع حافظه","مرورگر","زبان برنامه‌نویسی"],0],
+["با پیام جایزه ناشناس چه باید کرد؟",["با احتیاط بررسی و از لینک مشکوک دوری کرد","فوراً رمز داد","برای همه فرستاد","اطلاعات بانکی وارد کرد"],0],
+["کدام مورد اطلاعات حساس است؟",["رمز عبور","رنگ مورد علاقه","نام یک کتاب عمومی","نام یک سیاره"],0],
+["چرا نباید یک رمز را برای همه حساب‌ها به کار برد؟",["لو رفتن یک رمز چند حساب را در معرض خطر می‌گذارد","تایپ آن سخت است","اینترنت قطع می‌شود","صفحه تاریک می‌شود"],0],
+["بهترین کار برای به‌روزرسانی چیست؟",["استفاده از منبع رسمی دستگاه","دانلود فایل ناشناس","نادیده‌گرفتن همه به‌روزرسانی‌ها","دادن رمز به غریبه"],0],
+["دسترسی برنامه به میکروفون را چه‌طور مدیریت کنیم؟",["فقط هنگام نیاز اجازه بدهیم","همیشه به همه برنامه‌ها بدهیم","رمز را منتشر کنیم","بررسی نکنیم"],0],
+["نشانی سایت را چه زمانی بررسی کنیم؟",["پیش از واردکردن اطلاعات حساس","فقط بعد از پرداخت","هیچ‌وقت","فقط هنگام بازی"],0],
+["کدام نشانه می‌تواند هشدار فیشینگ باشد؟",["درخواست فوری رمز از فرستنده ناشناس","پیام معمولی از منبع شناخته‌شده","صفحه تنظیمات رسمی","اعلان به‌روزرسانی معتبر"],0],
+["قفل صفحه چه کمکی می‌کند؟",["کاهش دسترسی افراد دیگر به دستگاه","افزایش فضای ذخیره‌سازی","افزایش سرعت تایپ","تغییر زبان برنامه"],0],
+["اطلاعات خصوصی را کجا باید منتشر کرد؟",["در فضای عمومی منتشر نکنیم","در همه گروه‌ها","در پیام ناشناس","در قسمت نظر سایت‌ها"],0],
+["اگر لینکی مشکوک بود چه کنیم؟",["باز نکنیم و از راه رسمی بررسی کنیم","رمز را وارد کنیم","برای دوستان بفرستیم","هشدار مرورگر را خاموش کنیم"],0],
+["کدام مورد رفتار مسئولانه است؟",["گزارش پیام مشکوک به بزرگسال یا مسئول مورد اعتماد","انتشار رمز دوست","نصب فایل ناشناس","استفاده از رمز مشترک"],0]
+]};
+const labels={computer:"آموزش کامپیوتر",programming:"برنامه‌نویسی",cyber:"امنیت سایبری"};
+const DBKEY="raminAcademyDemo_v3";
+let db={users:[],current:null,enrollments:{},completed:{},scores:{}};
+try{const saved=JSON.parse(localStorage.getItem(DBKEY)||"null");if(saved&&typeof saved==="object")db={...db,...saved}}catch(e){}
+function save(){try{localStorage.setItem(DBKEY,JSON.stringify(db))}catch(e){alert("ذخیره‌سازی مرورگر در دسترس نیست.")}}
+function currentUser(){return db.users.find(u=>u.email===db.current)||null}
+function message(t,ok=false){const el=document.getElementById("authMessage");el.textContent=t;el.className=ok?"success":"notice"}
+document.getElementById("registerForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("regName").value.trim(),email=document.getElementById("regEmail").value.trim().toLowerCase(),pass=document.getElementById("regPass").value;if(db.users.some(u=>u.email===email)){message("این ایمیل در نمونه آزمایشی ثبت شده است.");return}db.users.push({name,email,pass});db.current=email;save();e.target.reset();message("حساب آزمایشی ساخته شد. خوش آمدی "+name,true);renderDashboard()});
+document.getElementById("loginForm").addEventListener("submit",e=>{e.preventDefault();const email=document.getElementById("loginEmail").value.trim().toLowerCase(),pass=document.getElementById("loginPass").value,u=db.users.find(x=>x.email===email&&x.pass===pass);if(!u){message("ایمیل یا رمز آزمایشی درست نیست.");return}db.current=email;save();message("با موفقیت وارد شدی، "+u.name,true);renderDashboard()});
+document.getElementById("logoutBtn").addEventListener("click",()=>{db.current=null;save();renderDashboard();message("از حساب خارج شدی.",true)});
+function enroll(id){if(!currentUser()){alert("ابتدا در بخش ورود و ثبت‌نام یک حساب آزمایشی بساز یا وارد شو.");location.hash="#auth";return}db.enrollments[db.current]=db.enrollments[db.current]||[];if(!db.enrollments[db.current].includes(id)){db.enrollments[db.current].push(id);save()}alert("در دوره "+labels[id]+" ثبت‌نام شدی.");renderDashboard();showCourse(id)}
+function showCourse(id){const c=courses[id],area=document.getElementById("lessonArea");if(!c)return;area.replaceChildren();const h=document.createElement("h3");h.textContent=c.title;area.appendChild(h);c.lessons.forEach((l,i)=>{const box=document.createElement("article");box.className="lesson card";const title=document.createElement("h3");title.textContent=l[0];const p=document.createElement("p");p.textContent=l[1];const task=document.createElement("p");task.innerHTML="<b>تمرین:</b> ";task.append(document.createTextNode(l[2].replace("تمرین: ","")));const done=document.createElement("button");done.textContent="درس را کامل کردم";done.onclick=()=>completeLesson(id,i);box.append(title,p,task,done);area.appendChild(box)});area.scrollIntoView({behavior:"smooth"})}
+function completeLesson(id,i){if(!currentUser()){alert("ابتدا وارد حساب شو.");return}db.completed[db.current]=db.completed[db.current]||{};db.completed[db.current][id]=db.completed[db.current][id]||[];if(!db.completed[db.current][id].includes(i))db.completed[db.current][id].push(i);save();renderDashboard();alert("پیشرفت این درس در نمونه همین مرورگر ثبت شد.")}
+function showQuizResult(id,score){db.scores[db.current]=db.scores[db.current]||{};db.scores[db.current][id]={score,total:15,date:new Date().toLocaleDateString("fa-IR")};save();renderDashboard()}
+function startQuiz(id){if(!currentUser()){alert("برای شرکت در آزمون ابتدا وارد حساب آزمایشی شو.");location.hash="#auth";return}if(!(db.enrollments[db.current]||[]).includes(id)){alert("ابتدا در همین دوره ثبت‌نام کن.");return}const area=document.getElementById("quizArea");area.classList.remove("hidden");area.replaceChildren();const h=document.createElement("h3");h.textContent="آزمون "+labels[id]+" | ۱۵ سؤال";area.appendChild(h);const form=document.createElement("form");quizzes[id].forEach((q,i)=>{const wrap=document.createElement("div");wrap.className="quiz-q";const title=document.createElement("h4");title.textContent=(i+1)+". "+q[0];wrap.appendChild(title);q[1].forEach((option,j)=>{const lab=document.createElement("label"),radio=document.createElement("input");radio.type="radio";radio.name="q"+i;radio.value=j;radio.required=true;lab.append(radio,document.createTextNode(option));wrap.appendChild(lab)});form.appendChild(wrap)});const submit=document.createElement("button");submit.type="submit";submit.textContent="ثبت پاسخ‌ها و دیدن نتیجه";form.appendChild(submit);const result=document.createElement("p");result.className="result";form.addEventListener("submit",e=>{e.preventDefault();let score=0;quizzes[id].forEach((q,i)=>{const chosen=form.querySelector('input[name="q'+i+'"]:checked');if(chosen&&Number(chosen.value)===q[2])score++});const percent=Math.round(score/15*100);result.textContent="نتیجه: "+score+" از ۱۵ پاسخ درست ("+percent+"٪).";showQuizResult(id,score)});form.appendChild(result);area.appendChild(form);area.scrollIntoView({behavior:"smooth"})}
+function renderDashboard(){const u=currentUser(),area=document.getElementById("dashboardArea"),logout=document.getElementById("logoutBtn");area.replaceChildren();if(!u){area.textContent="برای مشاهده داشبورد، ابتدا وارد حساب آزمایشی شو.";logout.classList.add("hidden");return}logout.classList.remove("hidden");const h=document.createElement("h3");h.textContent="خوش آمدی "+u.name;area.appendChild(h);const enrolled=db.enrollments[u.email]||[];if(!enrolled.length){const p=document.createElement("p");p.textContent="هنوز در دوره‌ای ثبت‌نام نکرده‌ای.";area.appendChild(p)}enrolled.forEach(id=>{const box=document.createElement("div");box.className="card";const title=document.createElement("h3");title.textContent=labels[id];const done=(db.completed[u.email]||{})[id]||[];const pct=Math.round(done.length/5*100);const bar=document.createElement("div");bar.className="progress";const span=document.createElement("span");span.style.width=pct+"%";bar.appendChild(span);const p=document.createElement("p");p.textContent="پیشرفت درس‌ها: "+done.length+" از ۵ ("+pct+"٪)";const score=(db.scores[u.email]||{})[id];const s=document.createElement("p");s.textContent=score?"آخرین آزمون: "+score.score+" از "+score.total+" | "+score.date:"هنوز آزمونی ثبت نشده است.";const btn=document.createElement("button");btn.textContent="بازکردن درس‌ها";btn.onclick=()=>showCourse(id);box.append(title,bar,p,s,btn);area.appendChild(box)})}
+function showCourseFromCard(id){showCourse(id)}
+renderDashboard();
 </script>
-</body>
-</html>
+</body></html>
