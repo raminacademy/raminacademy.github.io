@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ramin Academy؛ آموزش کامپیوتر، برنامه‌نویسی، امنیت دیجیتال و ارتباط با ما">
+<meta name="description" content="Ramin Academy؛ آموزش کامل کامپیوتر، برنامه‌نویسی، امنیت سایبری و مهارت‌های دیجیتال">
 <meta name="theme-color" content="#071225">
 <title>Ramin Academy | آکادمی فناوری</title>
 <style>
@@ -11,7 +11,16 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
 header{padding:24px 16px;text-align:center;background:radial-gradient(circle at 20% 0,#174c78,transparent 40%),linear-gradient(120deg,#10294b,#071225);border-bottom:1px solid var(--line)}
-.logo{font-size:clamp(28px,5vw,44px);font-weight:900;color:var(--cyan);letter-spacing:1px}header p{margin:3px;color:var(--muted)}
+.brand-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:clamp(28px,5vw,44px);font-weight:900;color:var(--cyan);letter-spacing:1px}
+header p{margin:3px;color:var(--muted)}
+.computer-mascot{width:88px;height:78px;position:relative;display:inline-flex;align-items:center;justify-content:center;animation:mascot-float 2.4s ease-in-out infinite;filter:drop-shadow(0 8px 12px #0005)}
+.mascot-screen{width:70px;height:52px;border:5px solid #9bdfff;border-radius:10px;background:linear-gradient(145deg,#173b60,#071225);display:flex;align-items:center;justify-content:center;position:relative}
+.mascot-screen:before{content:"";position:absolute;bottom:-13px;left:25px;width:18px;height:9px;background:#9bdfff;border-radius:0 0 4px 4px}
+.mascot-screen:after{content:"";position:absolute;bottom:-17px;left:15px;width:38px;height:5px;background:#9bdfff;border-radius:8px}
+.mascot-face{font-size:23px;animation:mascot-blink 3.5s infinite}
+@keyframes mascot-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes mascot-blink{0%,46%,50%,100%{opacity:1}48%{opacity:.35}}
 nav{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:10px;background:#09172bf2;border-bottom:1px solid var(--line)}
 nav a{color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:20px;font-size:13px}nav a:hover{background:#17385c;color:white}
 main{max-width:1180px;margin:auto}.hero{padding:65px 20px;background:radial-gradient(ellipse at 85% 10%,#164a75,transparent 55%)}
@@ -23,7 +32,7 @@ button:hover,.btn:hover{filter:brightness(1.15)}.secondary{background:#2b405f}.o
 section{padding:38px 18px;scroll-margin-top:85px}.section-title{text-align:center;color:var(--cyan);font-size:27px;margin:0 0 5px}.lead{text-align:center;color:var(--muted);max-width:800px;margin:0 auto 22px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px;margin:20px 0}
 .card p,.panel p{color:var(--muted)}.tag{display:inline-block;background:#173b60;color:#a8e5ff;border-radius:20px;padding:2px 10px;font-size:12px}
-.lesson{margin:14px 0;text-align:right}.lesson h3{margin-bottom:5px}.lesson pre{direction:ltr;text-align:left;white-space:pre-wrap;background:#040c18;color:#d9efff;padding:14px;border:1px solid var(--line);border-radius:10px;overflow:auto}
+.lesson{margin:14px 0;text-align:right}.lesson h3{margin-bottom:5px}.lesson p{line-height:2.05}.lesson pre{direction:ltr;text-align:left;white-space:pre-wrap;background:#040c18;color:#d9efff;padding:14px;border:1px solid var(--line);border-radius:10px;overflow:auto}
 label{display:block;color:var(--muted);margin:8px 0}input,textarea,select{width:100%;padding:11px;border-radius:8px;border:1px solid #536c89;background:#f5f8fc;color:#111;font:inherit;margin:5px 0 12px}
 input[type=radio],input[type=checkbox]{width:auto;margin-left:7px}textarea{min-height:90px}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}
@@ -36,7 +45,10 @@ footer{text-align:center;padding:30px;background:#040c18;color:var(--muted);bord
 </style>
 </head>
 <body>
-<header id="top"><div class="logo">RAMIN ACADEMY</div><p>از اولین کلیک تا ساختن آینده‌ای دیجیتال</p></header>
+<header id="top"><div class="brand-row">
+<div class="computer-mascot" aria-label="شخصیت متحرک کامپیوتر"><div class="mascot-screen"><span class="mascot-face">🤖</span></div></div>
+<div><div class="logo">RAMIN ACADEMY</div><p>از اولین کلیک تا ساختن آینده‌ای دیجیتال</p></div>
+</div></header>
 <nav aria-label="منوی اصلی">
 <a href="#home">خانه</a><a href="#courses">دوره‌ها</a><a href="#auth">ورود و ثبت‌نام</a><a href="#dashboard">داشبورد</a><a href="#quizzes">آزمون‌ها</a><a href="#about">درباره ما</a><a href="#contact">ارتباط با ما</a>
 </nav>
@@ -50,9 +62,9 @@ footer{text-align:center;padding:30px;background:#040c18;color:var(--muted);bord
 
 <section id="courses"><h2 class="section-title">دوره‌های آموزشی</h2><p class="lead">برای هر دوره جداگانه ثبت‌نام کن. یک حساب دانش‌آموزی برای همه دوره‌ها کافی است.</p>
 <div class="cards">
-<article class="card"><span class="tag">مقدماتی</span><h3>💻 آموزش کامپیوتر</h3><p>شناخت قطعات، ویندوز، مدیریت فایل‌ها، اینترنت و نرم‌افزارهای اداری.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>تمرین پایان درس</li></ul><div class="course-actions"><button onclick="enroll('computer')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('computer')">مشاهده درس‌ها</button></div></article>
-<article class="card"><span class="tag">مقدماتی تا متوسط</span><h3>👨‍💻 برنامه‌نویسی</h3><p>شروع ساخت وب‌سایت با HTML و CSS و آشنایی با JavaScript و Python.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>پروژه کوچک</li></ul><div class="course-actions"><button onclick="enroll('programming')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('programming')">مشاهده درس‌ها</button></div></article>
-<article class="card"><span class="tag">آگاهی دیجیتال</span><h3>🛡️ امنیت سایبری</h3><p>محافظت از حساب‌ها، شناخت فیشینگ، حریم خصوصی و امنیت دستگاه.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>تمرین تشخیص پیام مشکوک</li></ul><div class="course-actions"><button onclick="enroll('cyber')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('cyber')">مشاهده درس‌ها</button></div></article>
+<article class="card"><span class="tag">مقدماتی</span><h3>💻 آموزش کامپیوتر</h3><p>در این مسیر با دنیای کامپیوتر از پایه آشنا می‌شوی؛ یاد می‌گیری رایانه چگونه کار می‌کند، قطعات اصلی چه وظیفه‌ای دارند، ویندوز را چطور مدیریت کنی، فایل‌ها و پوشه‌ها را مرتب نگه داری و با اینترنت و مرورگرها هوشمندانه کار کنی. این دوره برای شروع یادگیری مهارت‌های کاربردی رایانه طراحی شده است.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>تمرین پایان درس</li></ul><div class="course-actions"><button onclick="enroll('computer')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('computer')">مشاهده درس‌ها</button></div></article>
+<article class="card"><span class="tag">مقدماتی تا متوسط</span><h3>👨‍💻 برنامه‌نویسی</h3><p>در این دوره قدم‌به‌قدم با منطق برنامه‌نویسی آشنا می‌شوی و ساخت صفحه وب را با HTML آغاز می‌کنی. سپس با CSS ظاهر سایت را طراحی می‌کنی و می‌بینی JavaScript چگونه به صفحه تعامل می‌دهد. در پایان نیز با مقدمات Python آشنا می‌شوی و یک مسیر روشن برای ساخت پروژه‌های کوچک پیدا می‌کنی.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>پروژه کوچک</li></ul><div class="course-actions"><button onclick="enroll('programming')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('programming')">مشاهده درس‌ها</button></div></article>
+<article class="card"><span class="tag">آگاهی دیجیتال</span><h3>🛡️ امنیت سایبری</h3><p>این دوره به تو کمک می‌کند در فضای دیجیتال آگاهانه‌تر رفتار کنی. با اصول محافظت از حساب‌ها، ساخت رمزهای قوی، تأیید دومرحله‌ای، شناخت پیام‌ها و لینک‌های فریبنده، مراقبت از اطلاعات شخصی و امن نگه‌داشتن دستگاه‌ها آشنا می‌شوی. آموزش‌ها با رویکرد پیشگیری، مسئولیت‌پذیری و استفاده قانونی از فناوری ارائه می‌شوند.</p><ul><li>۵ درس آموزشی</li><li>۱۵ سؤال آزمون</li><li>تمرین تشخیص پیام مشکوک</li></ul><div class="course-actions"><button onclick="enroll('cyber')">ثبت‌نام در دوره</button><button class="secondary" onclick="showCourse('cyber')">مشاهده درس‌ها</button></div></article>
 </div></section>
 
 <section id="auth"><h2 class="section-title">ورود و ثبت‌نام دانش‌آموز</h2><p class="lead">در نسخه نمایشی، اطلاعات فقط در همین مرورگر ذخیره می‌شود.</p>
@@ -77,17 +89,27 @@ footer{text-align:center;padding:30px;background:#040c18;color:var(--muted);bord
 <div class="panel" id="dashboardArea"><p class="muted">برای مشاهده داشبورد، ابتدا وارد حساب آزمایشی شو.</p></div>
 </section>
 
-<section id="about"><h2 class="section-title">درباره Ramin Academy</h2><div class="panel"><p>Ramin Academy یک پروژه آموزشی برای یادگیری مهارت‌های پایه فناوری، برنامه‌نویسی و امنیت دیجیتال است. هدف آن ساده‌کردن یادگیری با درس‌های کوتاه، تمرین و آزمون است.</p><p>در این آکادمی می‌توانی قدم‌به‌قدم یاد بگیری، تمرین انجام بدهی و میزان پیشرفتت را در داشبورد آزمایشی ببینی.</p></div></section>
+<section id="about"><h2 class="section-title">درباره Ramin Academy</h2><div class="panel">
+<h3>به Ramin Academy خوش آمدی؛ جایی برای یادگیری و ساختن آینده دیجیتال</h3>
+<p>Ramin Academy یک مجموعه آموزشی با هدف آشناکردن علاقه‌مندان با دنیای فناوری، مهارت‌های کامپیوتری، برنامه‌نویسی و امنیت دیجیتال است. فناوری هر روز بخش بیشتری از زندگی، تحصیل و کار ما را شکل می‌دهد؛ به همین دلیل یادگیری درست و اصولی آن می‌تواند فرصت‌های تازه‌ای برای رشد، خلاقیت و حل مسئله ایجاد کند.</p>
+<p>ما باور داریم یادگیری فناوری نباید پیچیده و ترسناک باشد. هر مهارت بزرگ از قدم‌های کوچک شروع می‌شود. در این آکادمی تلاش شده مطالب از سطح مقدماتی و با زبان ساده توضیح داده شوند تا دانش‌آموز بتواند مفاهیم را بهتر درک کند، آن‌ها را در عمل به کار ببرد و با اعتمادبه‌نفس بیشتری سراغ موضوعات پیشرفته‌تر برود.</p>
+<p>در بخش آموزش کامپیوتر، با اجزای رایانه، سیستم‌عامل، مدیریت فایل‌ها، اینترنت و ابزارهای کاربردی آشنا می‌شوی. در مسیر برنامه‌نویسی، منطق حل مسئله و ساخت صفحات وب را یاد می‌گیری و با زبان‌ها و ابزارهای پرکاربردی مانند HTML، CSS، JavaScript و Python آشنا می‌شوی. در بخش امنیت سایبری نیز اصول محافظت از حساب‌ها و اطلاعات، شناخت فریب‌های اینترنتی و حفظ حریم خصوصی را به شکل مسئولانه و دفاعی تمرین می‌کنی.</p>
+<p>روش آموزشی آکادمی بر پایه توضیح مرحله‌به‌مرحله، مثال، تمرین و سنجش یادگیری است. پس از مطالعه درس‌ها می‌توانی تمرین‌های هر بخش را انجام بدهی و با آزمون‌های آنلاین میزان آشنایی خود را بررسی کنی. داشبورد دانش‌آموز نیز در این نسخه نمایشی، دوره‌های انتخاب‌شده و پیشرفت ثبت‌شده را در همان مرورگر نشان می‌دهد.</p>
+<p>هدف ما فقط آشناکردن تو با چند اصطلاح یا ابزار نیست؛ می‌خواهیم مهارت پرسیدن سؤال، فکرکردن، تجربه‌کردن، اشتباه‌کردن و بهترساختن را تقویت کنیم. یک برنامه‌نویس خوب فقط کد نمی‌نویسد؛ مسئله را می‌شناسد و برای آن راه‌حل می‌سازد. یک کاربر آگاه نیز فقط از فناوری استفاده نمی‌کند؛ درباره امنیت، حریم خصوصی و پیامدهای کارهای آنلاین خود تصمیم سنجیده می‌گیرد.</p>
+<p>Ramin Academy در مسیر رشد و تکمیل قرار دارد و محتوای آن می‌تواند به‌مرور گسترش پیدا کند. از پیشنهادها و بازخوردهای سازنده استقبال می‌کنیم تا تجربه یادگیری روشن‌تر، کاربردی‌تر و جذاب‌تر شود. امیدواریم اینجا نقطه شروعی برای پروژه‌های خلاقانه و موفقیت‌های آینده تو باشد.</p>
+<p class="success"><b>شعار ما:</b> یادگیری امروز، مهارت فردا؛ از اولین کلیک تا ساختن آینده‌ای دیجیتال.</p>
+</div></section>
 
 <section id="contact"><h2 class="section-title">ارتباط با ما</h2><p class="lead">برای پرسش‌ها، پیشنهادها و پیگیری دوره‌ها از راه‌های زیر با Ramin Academy در ارتباط باش.</p>
 <div class="cards">
 <div class="card"><h3>✈️ تلگرام</h3><p>آیدی رسمی تلگرام آکادمی:</p><p dir="ltr"><b>@Academ282</b></p><a class="btn" href="https://t.me/Academ282" target="_blank" rel="noopener noreferrer">ورود به تلگرام</a></div>
 <div class="card"><h3>💬 روبیکا</h3><p>آیدی روبیکای آکادمی:</p><p dir="ltr"><b>@Raminacademy1</b></p><a class="btn" href="https://rubika.ir/Raminacademy1" target="_blank" rel="noopener noreferrer">ورود به روبیکا</a></div>
+<div class="card"><h3>📨 ایتا</h3><p>برای دنبال‌کردن اطلاعیه‌ها و ارتباط با آکادمی در ایتا:</p><p dir="ltr"><b>eitaa.com/Academyramin</b></p><a class="btn" href="https://eitaa.com/Academyramin" target="_blank" rel="noopener noreferrer">ورود به ایتا</a></div>
 </div>
 <p class="notice">نکته: پیوندها به صفحه آیدی‌های اعلام‌شده می‌روند. اگر آیدی در آن برنامه فعال یا عمومی نباشد، ممکن است صفحه باز نشود.</p>
 </section>
 </main>
-<footer><b>Ramin Academy</b><p>یادگیری امروز، مهارت فردا</p><p><a href="https://t.me/Academ282" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">تلگرام</a> · <a href="https://rubika.ir/Raminacademy1" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">روبیکا</a></p><a href="#top" style="color:var(--cyan)">بازگشت به بالا ↑</a></footer>
+<footer><b>Ramin Academy</b><p>یادگیری امروز، مهارت فردا</p><p><a href="https://t.me/Academ282" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">تلگرام</a> · <a href="https://rubika.ir/Raminacademy1" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">روبیکا</a> · <a href="https://eitaa.com/Academyramin" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">ایتا</a></p><a href="#top" style="color:var(--cyan)">بازگشت به بالا ↑</a></footer>
 
 <script>
 "use strict";
@@ -111,6 +133,37 @@ cyber:{title:"امنیت سایبری",lessons:[
 ["درس ۴: حریم خصوصی","اطلاعاتی مانند نشانی خانه، شماره تماس، رمزها و مدارک شخصی را عمومی نکن. دسترسی برنامه‌ها به دوربین، میکروفون و موقعیت مکانی را بررسی کن و فقط اطلاعات ضروری را به اشتراک بگذار.","تمرین: دو تنظیم حریم خصوصی در تلفن یا رایانه خود پیدا کن."],
 ["درس ۵: امنیت دستگاه و شبکه","سیستم‌عامل و برنامه‌ها را به‌روز نگه دار، قفل صفحه فعال کن و برنامه‌ها را از منابع معتبر بگیر. از شبکه‌های عمومی برای کارهای حساس با احتیاط استفاده کن و هشدارهای امنیتی مرورگر را نادیده نگیر.","تمرین: فهرستی از سه کار برای امن‌تر نگه‌داشتن دستگاهت بنویس."]]}
 };
+
+// توضیحات تکمیلی و گسترده‌تر برای هر درس
+const extraLessons = {
+computer: [
+"برای درک بهتر، کامپیوتر را مانند یک گروه کاری تصور کن: ابزارهای ورودی اطلاعات را وارد می‌کنند، پردازنده دستورها را انجام می‌دهد، حافظه موقت داده‌های موردنیاز را در دسترس نگه می‌دارد و ابزارهای خروجی نتیجه را نشان می‌دهند. کامپیوترها فقط رایانه‌های رومیزی نیستند؛ لپ‌تاپ، تبلت، تلفن هوشمند و حتی بسیاری از دستگاه‌های هوشمند نیز از اصول مشابهی استفاده می‌کنند. هرچه شناختت از این چرخه بیشتر شود، هنگام کار با دستگاه یا عیب‌یابی ساده بهتر تصمیم می‌گیری.",
+"سیستم‌عامل رابط میان کاربر، برنامه‌ها و سخت‌افزار است. وقتی یک برنامه را باز می‌کنی، سیستم‌عامل منابع لازم را در اختیار آن قرار می‌دهد و به مدیریت پنجره‌ها، حافظه، فایل‌ها و دستگاه‌های متصل کمک می‌کند. در ویندوز می‌توانی از منوی Start برنامه‌ها را پیدا کنی، با Taskbar بین پنجره‌ها جابه‌جا شوی و از Settings تنظیمات دستگاه را تغییر دهی. بهتر است پیش از تغییر تنظیمات ناشناخته، نام گزینه و اثر آن را بررسی کنی و فایل‌های مهم را مرتب نگه داری.",
+"مرتب‌سازی فایل‌ها باعث می‌شود اطلاعات را سریع‌تر پیدا کنی و احتمال گم‌شدن کارها کمتر شود. برای نام‌گذاری، از عنوان‌های روشن و تاریخ یا شماره نسخه استفاده کن؛ مثلاً Science-Homework. پسوند فایل به برنامه‌ها کمک می‌کند نوع محتوا را تشخیص دهند، اما تغییر نام پسوند به‌تنهایی قالب واقعی فایل را تبدیل نمی‌کند. برای جابه‌جایی فایل‌ها از Cut و Paste و برای ساخت نسخه دوم از Copy و Paste استفاده می‌شود. بهتر است از اسناد مهم نسخه پشتیبان داشته باشی.",
+"هر قطعه سخت‌افزاری نقش مشخصی دارد. پردازنده دستورها را اجرا می‌کند، RAM فضای کاری موقت برنامه‌های فعال است، حافظه SSD یا HDD داده‌ها را حتی پس از خاموش‌شدن نگه می‌دارد و مادربرد مسیر ارتباط قطعات را فراهم می‌کند. ظرفیت بیشتر RAM می‌تواند به اجرای هم‌زمان برنامه‌ها کمک کند، درحالی‌که نوع و سرعت حافظه ذخیره‌سازی روی زمان روشن‌شدن و بازشدن فایل‌ها اثر دارد. هنگام بررسی مشخصات یک رایانه، باید مجموعه قطعات را متناسب با نوع استفاده در نظر بگیری.",
+"اینترنت زیرساخت ارتباطی گسترده‌ای است که دستگاه‌ها و شبکه‌ها را به هم متصل می‌کند. وب یکی از خدماتی است که از اینترنت استفاده می‌کند و صفحات آن با مرورگر نمایش داده می‌شوند. موتور جست‌وجو ابزار پیدا کردن صفحه‌ها و منابع است؛ بنابراین مرورگر و موتور جست‌وجو یک چیز نیستند. هنگام جست‌وجو، چند منبع معتبر را مقایسه کن، تاریخ انتشار و نویسنده را ببین و هر نتیجه‌ای را بدون بررسی درست فرض نکن. نشانی سایت و امن‌بودن اتصال را پیش از واردکردن اطلاعات بررسی کن."
+],
+programming: [
+"برنامه‌نویسی راهی برای تبدیل یک ایده یا مسئله به دستورهای دقیق و قابل اجراست. پیش از نوشتن کد، مشخص کن ورودی چیست، چه پردازشی لازم است و خروجی مورد انتظار چیست. الگوریتم را می‌توان با زبان ساده، فهرست مرحله‌ها یا نمودار نمایش داد. سپس آن را به کد تبدیل می‌کنی و با چند ورودی مختلف آزمایش می‌کنی. خطا بخشی طبیعی از فرایند یادگیری است؛ پیام خطا را با دقت بخوان، مسئله را کوچک‌تر کن و هر بار یک تغییر انجام بده.",
+"HTML ساختار و معنای بخش‌های صفحه وب را مشخص می‌کند. بیشتر عناصر با تگ آغاز و پایان نوشته می‌شوند و محتوای صفحه درون آن‌ها قرار می‌گیرد. عنوان‌ها برای سازمان‌دهی محتوا، پاراگراف برای متن، پیوند برای رفتن به صفحه دیگر و تصویر برای نمایش محتوای بصری به کار می‌روند. ساختار درست و استفاده از عنوان‌های مرتب، خواندن صفحه را برای انسان‌ها و ابزارهای کمکی آسان‌تر می‌کند. HTML را اسکلت صفحه در نظر بگیر؛ ظاهر و رفتار صفحه در مرحله‌های بعد تکمیل می‌شود.",
+"CSS مسئول ظاهر و چیدمان صفحه است. با انتخابگر مشخص می‌کنی کدام عنصر تغییر کند و با ویژگی‌هایی مانند color، background، font-size، margin و padding ظاهر آن را تنظیم می‌کنی. بهتر است کدهای CSS را منظم بنویسی و برای بخش‌های مشابه از کلاس استفاده کنی تا تغییرات یکپارچه باشند. طراحی واکنش‌گرا کمک می‌کند صفحه در نمایشگر موبایل، تبلت و رایانه قابل استفاده بماند. هنگام طراحی، خوانایی متن، کنتراست رنگ و فاصله مناسب عناصر را در نظر بگیر.",
+"JavaScript به صفحه وب امکان واکنش به رویدادها و تغییر محتوا را می‌دهد. متغیرها داده‌ها را نگه می‌دارند، شرط‌ها مسیر اجرای برنامه را بر اساس وضعیت انتخاب می‌کنند و حلقه‌ها کارهای تکراری را انجام می‌دهند. تابع مجموعه‌ای از دستورهاست که می‌توان آن را در بخش‌های مختلف برنامه دوباره فراخوانی کرد. رویدادهایی مانند کلیک دکمه یا ارسال فرم می‌توانند کد را اجرا کنند. برای یادگیری بهتر، یک صفحه ساده بساز که با کلیک روی دکمه پیامی نمایش دهد و سپس آن را گسترش بده.",
+"Python به دلیل خوانایی و ساختار نسبتاً ساده، برای شروع یادگیری برنامه‌نویسی گزینه مناسبی است. می‌توانی با print خروجی نمایش بدهی، با input داده دریافت کنی و با متغیرها آن‌ها را نگه داری. نوع داده‌هایی مانند متن، عدد صحیح و عدد اعشاری کاربردهای متفاوت دارند. شرط if امکان تصمیم‌گیری می‌دهد و حلقه‌ها برای تکرار دستورها استفاده می‌شوند. پس از یادگیری مبانی، پروژه‌های کوچک مثل ماشین‌حساب ساده، دفترچه یادداشت یا برنامه تبدیل واحد می‌توانند تمرین خوبی باشند."
+],
+cyber: [
+"امنیت سایبری مجموعه‌ای از روش‌ها و تصمیم‌ها برای محافظت از دستگاه‌ها، شبکه‌ها و اطلاعات است. امنیت فقط نصب یک برنامه نیست؛ به‌روزرسانی، انتخاب رمز مناسب، شناخت خطرها و رفتار محتاطانه هم اهمیت دارند. محرمانگی یعنی اطلاعات فقط در اختیار افراد مجاز باشد، یکپارچگی یعنی داده بدون اجازه تغییر نکند و دسترس‌پذیری یعنی افراد مجاز هنگام نیاز بتوانند از اطلاعات و خدمات استفاده کنند. رعایت این اصول در خانه، مدرسه و فضای آنلاین اهمیت دارد.",
+"رمز عبور باید طولانی، منحصربه‌فرد و حدس‌زدن آن دشوار باشد. استفاده از نام، تاریخ تولد یا یک رمز تکراری برای چند حساب انتخاب مناسبی نیست. تأیید دومرحله‌ای یک لایه محافظتی اضافه می‌کند؛ یعنی علاوه بر رمز، عامل تأیید دیگری نیز لازم است. کدهای یک‌بارمصرف و درخواست‌های تأیید ورود را در اختیار دیگران قرار نده. اگر پیامی غیرمنتظره برای تأیید ورود دریافت کردی، آن را تأیید نکن و از مسیر رسمی تنظیمات حساب، فعالیت‌های ورود را بررسی کن.",
+"فیشینگ نوعی فریب آنلاین است که در آن پیام یا صفحه‌ای شبیه نمونه واقعی ساخته می‌شود تا کاربر را به انجام کاری مانند واردکردن اطلاعات یا بازکردن پیوند ترغیب کند. نشانه‌هایی مثل ایجاد عجله، وعده جایزه غیرمنتظره، درخواست رمز یا کد تأیید و نشانی نامرتبط باید باعث مکث و بررسی شوند. نام فرستنده به‌تنهایی کافی نیست؛ ممکن است ظاهر پیام جعل شده باشد. در صورت تردید، روی پیوند کلیک نکن، از برنامه یا نشانی رسمی وارد حساب شو و موضوع را با فرد قابل اعتماد یا پشتیبانی رسمی بررسی کن.",
+"حریم خصوصی یعنی بتوانی درباره جمع‌آوری، استفاده و انتشار اطلاعات شخصی خود آگاهانه تصمیم بگیری. پیش از انتشار عکس، موقعیت مکانی، شماره تماس یا اطلاعات مدرسه فکر کن چه کسانی ممکن است آن را ببینند و آیا واقعاً لازم است عمومی شود. تنظیمات حریم خصوصی شبکه‌های اجتماعی را مرور کن، دسترسی برنامه‌ها به دوربین و میکروفون را فقط در زمان نیاز فعال نگه دار و درخواست‌های ناشناس را با احتیاط بررسی کن. اطلاعاتی که یک‌بار منتشر می‌شود ممکن است به‌راحتی از کنترل خارج شود.",
+"برای مراقبت از دستگاه، سیستم‌عامل و برنامه‌ها را از مسیرهای رسمی به‌روز نگه دار، قفل صفحه فعال کن و از نصب نرم‌افزارهای ناشناس خودداری کن. نسخه پشتیبان از فایل‌های مهم تهیه کن تا در صورت خرابی یا حذف ناخواسته بتوانی آن‌ها را بازیابی کنی. در شبکه‌های عمومی، از ورود به حساب‌های حساس روی دستگاه‌های مشترک پرهیز کن و پس از استفاده از حساب خارج شو. هشدارهای مرورگر و سیستم را جدی بگیر و اگر درباره یک فایل یا پیام مطمئن نیستی، آن را باز نکن و از فرد آگاه کمک بگیر."
+]
+};
+for (const [courseId, paragraphs] of Object.entries(extraLessons)) {
+  courses[courseId].lessons.forEach((lesson, index) => {
+    lesson[1] += "\n\nتوضیحات تکمیلی:\n" + paragraphs[index];
+  });
+}
+
 const quizzes={
 computer:[
 ["کامپیوتر داده‌ها را چه‌طور پردازش می‌کند؟",["طبق دستورها","با حدس","فقط با اینترنت","بدون برق"],0],
